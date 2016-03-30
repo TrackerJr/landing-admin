@@ -4,7 +4,7 @@
 //= require_tree controllers
 //= require_tree directives
 //= require_tree templates
-//= require /angular/ui-bootstrap-tpls
+//= require /angular/module/ui-bootstrap-tpls
 
 angular.module("landing.admin.index", [
   "landing.admin.core",
