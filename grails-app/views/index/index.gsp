@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="cms">
+<html lang="en" ng-app="landing.admin">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,10 @@
   <body>
   	
   	<g:render template="/components/navbar" />
-  	<div ui-view="" class="container"></div>
-  	  
+  	
+  	<div ui-view="" class="container">
+  	</div>
+  	
 	<asset:javascript src="application.js" />	
   </body>
 </html>
