@@ -9,7 +9,9 @@ class UrlMappings {
             }
         }
 
-        "/"(view: 'index')
+        "/$path**"(controller: 'index', action: 'index')
+		"/grails"(controller: 'index', action: 'grails')
+		"/partials/$path**"(controller: 'partials', action: 'index')
         "500"(view: '/error')
         "404"(view: '/notFound')
     }
