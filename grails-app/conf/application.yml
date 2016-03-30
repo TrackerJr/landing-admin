@@ -1,3 +1,11 @@
+server:
+    context-path: /landing-admin
+    port: 8080
+---
+proxyServlet:
+    targetUri: http://localhost:8081/landing-be
+    urlPattern: /rest/*
+    logEnabled: true
 ---
 hibernate:
     cache:
@@ -46,11 +54,10 @@ environments:
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
 ---
----
 grails:
     profile: angular
     codegen:
-        defaultPackage: landing.admin
+        defaultPackage: th.co.ais.landing
     spring:
         transactionManagement:
             proxies: false
@@ -105,3 +112,6 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
+---
+project:
+    name: Landing page

@@ -21,3 +21,11 @@ if (Environment.isDevelopmentMode() && targetDir) {
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
+
+logger("grails.app.controllers.th.co.ais",  DEBUG,   ['STDOUT'],   false)
+logger("grails.app.domain.th.co.ais",       DEBUG,   ['STDOUT'],   false)
+logger("grails.app.services.th.co.ais",     DEBUG,   ['STDOUT'],   false)
+logger("grails.app.taglib.th.co.ais",       DEBUG,   ['STDOUT'],   false)
+logger("grails.app.conf.th.co.ais",         DEBUG,   ['STDOUT'],   false)
+logger("grails.app.filters.th.co.ais",      DEBUG,   ['STDOUT'],   false)
+logger("grails.app.jobs.th.co.ais",         DEBUG,   ['STDOUT'],   false)
