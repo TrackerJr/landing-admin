@@ -8,7 +8,7 @@
 //= require_tree directives
 //= require_tree templates
 
-angular.module('landing.admin.upload', ['ui.router', 'angularFileUpload', 'ui.bootstrap', 'landing.admin.common'])
+angular.module('landing.admin.upload', ['ui.router', 'angularFileUpload', 'ui.bootstrap', 'landing.admin.common', 'landing.admin.login'])
 	.config(RouterConfig);
 
 function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {

@@ -3,8 +3,11 @@
 angular.module('landing.admin.upload')
 	.controller('NewFolderController', NewFolderController);
 
-function NewFolderController($scope, $uibModalInstance, FolderDomainService) {
-
+function NewFolderController($scope, folder, $uibModalInstance, FolderDomainService) {
+	$scope.bean = {
+		parent: folder
+	};
+	
 	$scope.cancel = function () {
 		 $uibModalInstance.dismiss('cancel');
 	};

@@ -3,7 +3,7 @@
 angular.module('landing.admin.upload')
 	.controller('UploadController', UploadController);
 
-function UploadController($scope, $uibModal, folders, FileUploader) {
+function UploadController($scope, $uibModal, $state, folders, FileUploader, TOKEN_HEADER_NAME, UserInfo) {
 	$scope.folders = folders;
 	
 	var uploader = $scope.uploader = new FileUploader({
@@ -25,6 +25,7 @@ function UploadController($scope, $uibModal, folders, FileUploader) {
     
     uploader.onAfterAddingFile = function(fileItem) {
         console.info('onAfterAddingFile', fileItem);
+        fileItem.headers[TOKEN_HEADER_NAME] = UserInfo.getToken();
     };
     
     uploader.onAfterAddingAll = function(addedFileItems) {
@@ -73,11 +74,16 @@ function UploadController($scope, $uibModal, folders, FileUploader) {
 			animation: true,
 			templateUrl: 'partials/upload/newFolder',
 		    controller: 'NewFolderController',
-		    size: 'sm'
+		    size: 'sm',
+		    resolve: {
+		    	folder: function(){
+		    		return '/';
+		    	}
+		    }
 		});
 		
 		modalInstance.result.then(function() {
-			
+			$state.reload();
 		}, function () {
 			
 		});
