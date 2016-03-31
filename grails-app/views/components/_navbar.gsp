@@ -12,7 +12,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="#" ui-sref="page.list">
+					<a href="#" ui-sref="upload">
 						<i class="glyphicon glyphicon-upload"></i> 
 						Upload
 					</a>

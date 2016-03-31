@@ -111,8 +111,11 @@ bower {
 		source 'src/http-auth-interceptor.js' >> '/angular/module/'
 	}
 	'angular-chart.js'('0.9.x') {
-		source 'angular-chart.js' >> '/chart/'
+		source 'angular-chart.js' >> '/angular/module/'
 		source 'angular-chart.css' >> '/chart/'
+	}
+	'angular-file-upload'('2.2.x') {
+		source 'dist/angular-file-upload.js' >> '/angular/module/'
 	}
     'bootstrap'('3.3.x') {
         source 'dist/css/bootstrap.css' >> '/bootstrap/'

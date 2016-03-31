@@ -3,7 +3,7 @@
 angular.module('landing.admin.login')
   	.service('UserInfo', UserInfo);
 
-function UserInfo(AUTH_TOKEN_KEY) {
+function UserInfo(TOKEN_HEADER_NAME) {
 	var info = {};
 	
 	this.init = function(username, access_token, roles) {
@@ -12,16 +12,16 @@ function UserInfo(AUTH_TOKEN_KEY) {
 			accessToken: access_token,
 			roles: roles
 		};
-		localStorage[AUTH_TOKEN_KEY] = info['accessToken'];
+		localStorage[TOKEN_HEADER_NAME] = info['accessToken'];
 	};
 	
 	this.setTokenExpired = function(){
-		delete localStorage[AUTH_TOKEN_KEY];		
+		delete localStorage[TOKEN_HEADER_NAME];		
 		info = {};
 	};
 	
 	this.getToken = function(){
-		return localStorage[AUTH_TOKEN_KEY]?localStorage[AUTH_TOKEN_KEY]:"''";
+		return localStorage[TOKEN_HEADER_NAME]?localStorage[TOKEN_HEADER_NAME]:"''";
 	};
 	
 	this.getUsername = function(){
