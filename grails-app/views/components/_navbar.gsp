@@ -24,7 +24,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" ui-sref="page.list">
+					<a href="#" ui-sref="user">
 						<i class="glyphicon glyphicon-list-alt"></i> 
 						User
 					</a>
