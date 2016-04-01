@@ -2,6 +2,7 @@
 //= require /jquery/jquery
 //= require /Chart.js/Chart
 //= require /angular/angular
+//= require ckeditor/ck-core
 //= require module/common/landing.admin.common
 //= require module/index/landing.admin.index
 //= require module/login/landing.admin.login

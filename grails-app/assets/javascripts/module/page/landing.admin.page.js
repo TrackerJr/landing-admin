@@ -20,7 +20,7 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 		controller: 'PageListController',
 		resolve:{
 			pages: function(PageDomainService) {
-				return []; //PageDomainService.list();
+				return PageDomainService.list();
 			}
 		}
 	}).state('page.create', {
