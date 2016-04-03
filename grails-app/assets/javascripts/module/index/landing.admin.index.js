@@ -22,7 +22,12 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 	$stateProvider.state('index', {
 		url: '/',
 		templateUrl: 'partials/dashboard',
-		controller: 'DashboardController'
+		controller: 'DashboardController',
+		resolve: {
+			datas: function(DashboardService){
+				return DashboardService.list();
+			}
+		}
 	});
 		
 }

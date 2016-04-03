@@ -1,5 +1,5 @@
 <div class="modal-header">
-   	<h3 class="modal-title text-center"><b>Server: {{rejection.data.error}}</b></h3>
+   	<h3 class="modal-title"><b>Server: {{rejection.data.error}}</b></h3>
 </div>
 <div class="modal-body">
 
@@ -7,5 +7,5 @@
 
 </div>
 <div class="modal-footer">
-   	<button type="submit" class="btn btn-primary btn-block" type="button" ><i class="glyphicon glyphicon-log-in"></i> WAIT</button>
+   	<button type="submit" class="btn btn-primary btn-block" type="button" ><i class="glyphicon glyphicon-remove"></i> CLOSE</button>
 </div>

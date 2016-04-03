@@ -115,3 +115,9 @@ grails:
 ---
 project:
     name: Landing page
+--- # File server
+grails:
+    plugins:
+        fileserver:
+            paths:
+                template: /upload/template

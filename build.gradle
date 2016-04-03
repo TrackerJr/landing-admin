@@ -38,6 +38,7 @@ ext {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+	maven { url "http://repo.grails.org/grails/repo" }
 }
 
 dependencyManagement {
@@ -116,6 +117,13 @@ bower {
 	}
 	'angular-file-upload'('2.2.x') {
 		source 'dist/angular-file-upload.js' >> '/angular/module/'
+	}
+	'angular-ui-notification'('0.1.x') {
+		source 'dist/angular-ui-notification.js' >> '/angular/module/'
+		source 'dist/angular-ui-notification.css' >> '/notification/'
+	}
+	'angular-confirm-modal'('1.2.x') {
+		source 'angular-confirm.min.js' >> '/angular/module/'
 	}
     'bootstrap'('3.3.x') {
         source 'dist/css/bootstrap.css' >> '/bootstrap/'

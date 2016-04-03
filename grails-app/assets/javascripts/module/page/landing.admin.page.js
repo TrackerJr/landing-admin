@@ -1,12 +1,13 @@
 //= wrapped
 //= require angular/module/angular-ui-router
+//= require angular/module/angular-ui-notification
 //= require_self
 //= require_tree services
 //= require_tree controllers
 //= require_tree directives
 //= require_tree templates
 
-angular.module('landing.admin.page', ['ui.router'])
+angular.module('landing.admin.page', ['ui.router', 'ui-notification'])
 	.config(RouterConfig);
 
 function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
@@ -30,6 +31,15 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 		resolve: {
 			page: function(){
 				return {};
+			}
+		}
+	}).state('page.edit', {
+		url: '/page/edit/:id',
+		templateUrl: 'partials/page/form',
+		controller: 'PageFormController',
+		resolve: {
+			page: function(PageDomainService, $stateParams) {
+				return PageDomainService.get($stateParams);
 			}
 		}
 	});
