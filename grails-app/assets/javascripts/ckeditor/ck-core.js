@@ -6,3 +6,4 @@
 //= require plugins/colordialog/dialogs/colordialog
 //= require plugins/div/dialogs/div
 //= require plugins/clipboard/dialogs/paste
+//= require plugins/bootstrap/plugin

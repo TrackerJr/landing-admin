@@ -13,13 +13,14 @@
 					<i class="glyphicon glyphicon-list-alt"></i> {{page.name}}
 				</h3>
 				<p>
-					<button class="btn btn-default" type="button">
+					<button class="btn btn-default" type="button" >
 						<i class="glyphicon glyphicon-download-alt"></i> Download
 					</button>
 					<a class="btn btn-default" href="#" role="button" ui-sref="page.edit({id: page.id})">
 						<i class="glyphicon glyphicon-edit"></i> Edit
 					</a>
-					<button class="btn btn-default" type="button" ng-click="doDelete({id: page.id})">
+					<button class="btn btn-default" type="button" confirm="Are you sure to delete this item?" confirm-settings="{size: 'sm'}"
+						ng-click="doDelete({id: page.id})">
 						<i class="glyphicon glyphicon-trash"></i> Delete
 					</button>
 				</p>

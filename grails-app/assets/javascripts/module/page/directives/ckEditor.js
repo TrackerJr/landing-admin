@@ -3,23 +3,23 @@
 angular.module('landing.admin.page')
 	.directive('ckEditor', ckEditor);
 
-function ckEditor($compile) {
+function ckEditor($compile, blockUI) {
 	return {
         require: '?ngModel',
-        link: function (scope, element, attrs, ngModel) {
-        	        	
+        link: function (scope, element, attrs, ngModel) {  
+        	
             var ck = CKEDITOR.replace(element[0], {
             	enterMode: CKEDITOR.ENTER_DIV,
             	fullPage: true,
 				allowedContent: true,
-				extraPlugins: 'docprops',
+				extraPlugins: 'docprops,bootstrap',
 				language: 'en'
             });
             
-            ck.on( 'loaded', function( evt ) {
-                console.log('ck editor loaded');
+            ck.on( 'instanceReady', function( evt ){
+            	this.document.appendStyleSheet( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
             });
-            
+           
             ck.on('pasteState', function () {
                 scope.$apply(function () {
                     ngModel.$setViewValue(ck.getData());
