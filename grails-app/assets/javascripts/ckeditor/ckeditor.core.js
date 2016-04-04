@@ -1,0 +1,12 @@
+//= require /ckeditor/ckeditor
+//= require /ckeditor/config
+//= require /ckeditor/styles
+//= require /ckeditor/lang/en
+//= require /ckeditor/plugins/colordialog/plugin
+//= require /ckeditor/plugins/colordialog/lang/en
+//= require /ckeditor/plugins/clipboard/dialogs/paste
+//= require plugins/docprops/plugin
+//= require plugins/docprops/lang/en
+//= require plugins/docprops/dialogs/docprops
+//= require plugins/bootstrap/plugin
+//= require plugins/bootstrap/dialogs/bootstrap

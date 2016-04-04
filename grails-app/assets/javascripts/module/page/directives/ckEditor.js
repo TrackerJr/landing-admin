@@ -17,6 +17,7 @@ function ckEditor($compile, blockUI) {
             });
             
 //            ck.on( 'instanceReady', function( evt ){
+//            	console.log(this.document);
 //            	this.document.appendStyleSheet( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
 //            });
            
