@@ -16,9 +16,9 @@ function ckEditor($compile, blockUI) {
 				language: 'en'
             });
             
-            ck.on( 'instanceReady', function( evt ){
-            	this.document.appendStyleSheet( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
-            });
+//            ck.on( 'instanceReady', function( evt ){
+//            	this.document.appendStyleSheet( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
+//            });
            
             ck.on('pasteState', function () {
                 scope.$apply(function () {

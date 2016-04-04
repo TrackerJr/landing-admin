@@ -3,7 +3,7 @@
 //= require_self
 //= require_tree services
 
-angular.module('landing.admin.common', ['ngResource', 'landing.admin.login'])
+angular.module('landing.admin.common', ['ngResource'])
 	.config(Interceptor);
 
 function Interceptor($httpProvider) {
