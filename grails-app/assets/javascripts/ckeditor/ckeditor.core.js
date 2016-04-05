@@ -5,6 +5,8 @@
 //= require /ckeditor/plugins/colordialog/plugin
 //= require /ckeditor/plugins/colordialog/lang/en
 //= require /ckeditor/plugins/clipboard/dialogs/paste
+//= require /ckeditor/plugins/justify/plugin
+//= require /ckeditor/plugins/justify/lang/en
 //= require plugins/docprops/plugin
 //= require plugins/docprops/lang/en
 //= require plugins/docprops/dialogs/docprops
