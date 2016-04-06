@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.height = 500;
 	
 	//config.extraPlugins: 'docprops,justify,templates';
-	config.plugins += ',docprops,justify,templates,showblocks';
+	config.plugins += ',docprops,justify,showblocks,bootstrap';
 	
 	config.toolbarGroups = [
         { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
@@ -25,6 +25,5 @@ CKEDITOR.editorConfig = function( config ) {
 	removeButtons += ',Styles' // styles
 	removeButtons += 'Underline,Subscript,Superscript,HorizontalRule,SpecialChar'; // insert
 	
-	//config.removeButtons = 'Image,Flash,Table,HorizontalRule,Smiley,SpecialChar,PageBreak,Iframe';
 	config.removeButtons = removeButtons;
 };
