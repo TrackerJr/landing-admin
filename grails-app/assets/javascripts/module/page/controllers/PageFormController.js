@@ -29,4 +29,5 @@ function PageFormController($scope, page, PageDomainService, Notification, $stat
 			PageDomainService.save(page).then(success, error)
 		}
 	};
+		
 }

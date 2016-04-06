@@ -3,7 +3,7 @@
 angular.module('landing.admin.page')
 	.directive('ckEditor', ckEditor);
 
-function ckEditor($compile, blockUI) {
+function ckEditor() {
 	return {
         require: '?ngModel',
         link: function (scope, element, attrs, ngModel) {  
@@ -11,8 +11,7 @@ function ckEditor($compile, blockUI) {
             var ck = CKEDITOR.replace(element[0], {
             	enterMode: CKEDITOR.ENTER_DIV,
             	fullPage: true,
-				allowedContent: true,
-				extraPlugins: 'docprops,bootstrap,justify',
+				allowedContent: true,				
 				language: 'en'
             });
             

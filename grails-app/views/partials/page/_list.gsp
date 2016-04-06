@@ -27,4 +27,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-xs-12" ng-if="pages.length == 0">
+		<p class="text-center">Page not found.</p>
+	</div>
 </div>
