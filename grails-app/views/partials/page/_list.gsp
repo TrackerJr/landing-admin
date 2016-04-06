@@ -13,9 +13,9 @@
 					<i class="glyphicon glyphicon-list-alt"></i> {{page.name}}
 				</h3>
 				<p>
-					<button class="btn btn-default" type="button" >
+					<a class="btn btn-default" href="download" role="button" target="_black">
 						<i class="glyphicon glyphicon-download-alt"></i> Download
-					</button>
+					</a>
 					<a class="btn btn-default" href="#" role="button" ui-sref="page.edit({id: page.id})">
 						<i class="glyphicon glyphicon-edit"></i> Edit
 					</a>

@@ -3,8 +3,12 @@
 angular.module('landing.admin.page')
 	.controller('PageListController', PageListController);
 
-function PageListController($scope, pages, PageDomainService, Notification, $state) {
+function PageListController($scope, pages, PageDomainService, DownloadService, Notification, $state) {
 	$scope.pages = pages;
+	
+	$scope.doDownload = function() {
+		DownloadService.getFile();
+	};
 	
 	$scope.doDelete = function(page){
 		PageDomainService.delete(page).then(function(){
