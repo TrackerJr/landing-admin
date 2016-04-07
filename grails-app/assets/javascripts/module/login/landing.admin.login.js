@@ -1,7 +1,8 @@
 //= wrapped
-//= require angular/module/http-auth-interceptor
-//= require angular/module/angular-block-ui
-//= require angular/module/angular-ui-notification
+//= require /agular/angular
+//= require /angular/module/http-auth-interceptor
+//= require /angular/module/angular-block-ui
+//= require /angular/module/angular-ui-notification
 //= require_self
 //= require_tree services
 //= require_tree controllers

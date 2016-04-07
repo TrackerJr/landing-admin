@@ -1,5 +1,6 @@
 //= wrapped
-//= require angular/module/angular-resource
+//= require /angular/angular
+//= require /angular/module/angular-resource
 //= require_self
 //= require_tree services
 

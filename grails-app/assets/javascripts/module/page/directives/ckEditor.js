@@ -11,7 +11,8 @@ function ckEditor() {
             var ck = CKEDITOR.replace(element[0], {
             	enterMode: CKEDITOR.ENTER_DIV,
             	fullPage: true,
-				allowedContent: true,				
+				allowedContent: true,		
+				extraPlugins: 'docprops',
 				language: 'en'
             });
             

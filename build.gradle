@@ -129,14 +129,14 @@ bower {
         source 'dist/css/bootstrap.css' >> '/bootstrap/'
 		source 'dist/fonts/**' >> '/fonts/'
     }
-	'ckeditor'('4.5.x') {
+	/*'ckeditor'('4.5.x') {
 		source 'ckeditor.js' >> '/ckeditor/'
 		source 'styles.js' >> '/ckeditor/'
 		source 'contents.css' >> '/ckeditor/'
 		source 'lang/**' >> '/ckeditor/lang/'
 		source 'plugins/**' >> '/ckeditor/plugins/'
 		source 'skins/**' >> '/ckeditor/skins/'
-	}
+	}*/
 }
 
 karma {

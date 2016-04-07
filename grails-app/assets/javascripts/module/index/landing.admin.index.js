@@ -1,4 +1,5 @@
 //= wrapped
+//= require /angular/angular
 //= require /angular/module/angular-ui-router
 //= require /angular/module/ui-bootstrap-tpls
 //= require /angular/module/angular-chart
@@ -8,7 +9,7 @@
 //= require_tree directives
 //= require_tree templates
 
-angular.module('landing.admin.index', ['ui.router', 'ui.bootstrap', 'chart.js'])
+angular.module('landing.admin.index', ['ui.router', 'ui.bootstrap', 'chart.js', 'landing.admin.login'])
 	.config(RouterConfig);
 
 function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
