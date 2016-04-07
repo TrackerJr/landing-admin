@@ -12,7 +12,7 @@ function ckEditor() {
             	enterMode: CKEDITOR.ENTER_DIV,
             	fullPage: true,
 				allowedContent: true,		
-				extraPlugins: 'docprops',
+				//extraPlugins: 'docprops',
 				language: 'en'
             });
             
