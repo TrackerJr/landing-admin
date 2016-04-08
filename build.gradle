@@ -137,6 +137,14 @@ bower {
 		source 'plugins/**' >> '/ckeditor/plugins/'
 		source 'skins/**' >> '/ckeditor/skins/'
 	}*/
+	'tinymce'('4.3.x') {
+		source 'tinymce.jquery.js' >> '/tinymce/'
+		source 'tinymce.js' >> '/tinymce/'
+		source 'themes/**' >> '/tinymce/themes/'
+		source 'skins/**' >> '/tinymce/skins/'
+		source 'plugins/**' >> '/tinymce/plugins/'
+		
+	}
 }
 
 karma {

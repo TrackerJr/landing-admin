@@ -13,6 +13,7 @@ class UrlMappings {
 		"/grails"(controller: 'index', action: 'grails')
 		"/partials/$path**"(controller: 'partials', action: 'index')
 		"/file/$root/$path**"(controller: "file")
+		"/download/$root/$path**"(controller: 'download', action: 'index')
 		
         "500"(view: '/error')
         "404"(view: '/notFound')

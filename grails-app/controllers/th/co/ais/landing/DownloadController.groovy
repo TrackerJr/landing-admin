@@ -7,13 +7,18 @@ import grails.converters.*
 class DownloadController {
 
     def index() { 
-		def file = new File("/upload/template/T1459913423979/index.html")
-		response.setContentType("application/octet-stream")
-		response.setHeader("Content-disposition", "filename=${file.getName()}")
-		response.setHeader("Content-Type","application/force-download");
-		response.outputStream << file.newInputStream()
-//		return		
+		log.debug "Root: ${params.root}"
 		
-		//render(file: new File("/upload/template/T1459913423979/index.html"), fileName: "index.html")
+		def fileDir = new File("/upload/template", params.root)
+		log.debug "Path: ${fileDir.exists()}"
+		if(!fileDir.exists())  {
+			response.status = 404
+		} else {
+			def file = new File()
+			response.setContentType("application/octet-stream")
+			response.setHeader("Content-disposition", "filename=${file.getName()}")
+			response.setHeader("Content-Type","application/force-download");
+			response.outputStream << file.newInputStream()
+		}
 	}
 }
