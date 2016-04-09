@@ -16,8 +16,7 @@
       
       <script src="http://nervgh.github.io/js/es5-shim.min.js"></script>
       <script src="http://nervgh.github.io/js/es5-sham.min.js"></script>
-    <![endif]-->    
-    
+    <![endif]-->
     <script type="text/javascript">
       window.contextPath = "${request.contextPath}";
     </script>

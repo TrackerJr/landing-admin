@@ -128,22 +128,15 @@ bower {
     'bootstrap'('3.3.x') {
         source 'dist/css/bootstrap.css' >> '/bootstrap/'
 		source 'dist/fonts/**' >> '/fonts/'
-    }
-	/*'ckeditor'('4.5.x') {
-		source 'ckeditor.js' >> '/ckeditor/'
-		source 'styles.js' >> '/ckeditor/'
-		source 'contents.css' >> '/ckeditor/'
-		source 'lang/**' >> '/ckeditor/lang/'
-		source 'plugins/**' >> '/ckeditor/plugins/'
-		source 'skins/**' >> '/ckeditor/skins/'
-	}*/
+    }	
 	'tinymce'('4.3.x') {
-		source 'tinymce.jquery.js' >> '/tinymce/'
 		source 'tinymce.js' >> '/tinymce/'
 		source 'themes/**' >> '/tinymce/themes/'
 		source 'skins/**' >> '/tinymce/skins/'
-		source 'plugins/**' >> '/tinymce/plugins/'
-		
+		source 'plugins/**' >> '/tinymce/plugins/'		
+	}
+	'angular-ui-tinymce'('0.0.x') {
+		source 'dist/tinymce.min.js' >> '/angular/module/'
 	}
 }
 

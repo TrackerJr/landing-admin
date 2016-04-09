@@ -3,13 +3,14 @@
 //= require /angular/module/http-auth-interceptor
 //= require /angular/module/angular-block-ui
 //= require /angular/module/angular-ui-notification
+//= require /angular/module/tinymce.min
 //= require_self
 //= require_tree services
 //= require_tree controllers
 //= require_tree directives
 //= require_tree templates
 
-angular.module('landing.admin.login', ['http-auth-interceptor', 'blockUI', 'ui-notification'])
+angular.module('landing.admin.login', ['http-auth-interceptor', 'blockUI', 'ui-notification', 'ui.tinymce'])
 	.constant('TOKEN_HEADER_NAME', 'X-Auth-Token')
 	.config(Interceptor)
 	.run(ServiceValidate);
