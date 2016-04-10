@@ -13,7 +13,8 @@ class FileController {
 		def root = params.root
 		def path = getPath(request.forwardURI, params.path)
 		
-		def basePath = grailsApplication.config.grails?.plugins?.fileserver?.paths?.get(root)
+		def basePath = grailsApplication.config.grails?.plugins?.fileserver?.paths?.get('template')
+		println "basePath: $basePath"
 		File file = basePath ? fileService.loadFile(basePath, path) : null
 		
 		if (file) {

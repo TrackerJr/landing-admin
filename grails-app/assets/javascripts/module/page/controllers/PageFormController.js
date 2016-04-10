@@ -6,6 +6,17 @@ angular.module('landing.admin.page')
 function PageFormController($scope, page, PageDomainService, Notification, $state) {
 	$scope.page = page;
 	
+	if(!$scope.page.id) {
+		$scope.page.links = [		
+		    {
+		    	type: 'StyleSheet',
+		    	link: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
+		    }
+		];	
+	}
+	
+	
+	
 	var success = function(){
 		Notification.success({
 			message: '<i class="glyphicon glyphicon-ok"></i> บันทึกสำเร็จ',
@@ -19,6 +30,16 @@ function PageFormController($scope, page, PageDomainService, Notification, $stat
 			message: '<i class="glyphicon glyphicon-remove"></i> บันทึกไม่สำเร็จ',
 			delay: 3000
 		});
+	};
+	
+	var getStyleSheet = function(){
+		var arr = [];
+		$.each($scope.page.links, function(index, object) {
+			if('StyleSheet' == object.type) {
+				arr.push(object.link);
+			}
+		});
+		return arr;
 	};
 	
 	$scope.tinymceOptions = {
@@ -43,11 +64,11 @@ function PageFormController($scope, page, PageDomainService, Notification, $stat
 			    { title: 'Test template 2', content: '<div class="container-fluid"><div class="row"><div class="col-xs-6">col-xs-6</div><div class="col-xs-6">col-xs-6</div></div></div>' }
 			],		    
 		    content_css: [
-		        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+		        //'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
 		        'assets/tinymce/content.css'
 		        //'fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
 		        //'www.tinymce.com/css/codepen.min.css'
-		    ],
+		    ].concat(getStyleSheet()),
 		    contextmenu: "link image inserttable | cell row column deletetable"
 	};
 	

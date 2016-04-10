@@ -1,9 +1,3 @@
-<style>
-.content-body {
-	background: red;
-}
-</style>
-
 <form>
 	<p>
 		<div class="pull-right">
