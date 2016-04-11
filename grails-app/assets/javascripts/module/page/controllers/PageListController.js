@@ -3,7 +3,7 @@
 angular.module('landing.admin.page')
 	.controller('PageListController', PageListController);
 
-function PageListController($scope, pages, PageDomainService, DownloadService, Notification, $state) {
+function PageListController($scope, pages, PageDomainService, Notification, $state) {
 	$scope.pages = pages;
 		
 	$scope.doDelete = function(page){

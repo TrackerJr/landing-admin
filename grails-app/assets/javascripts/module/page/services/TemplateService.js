@@ -1,14 +1,15 @@
 //= wrapped
 
 angular.module('landing.admin.page')
-	.service('DownloadService', DownloadService);
+	.service('TemplateService', TemplateService);
 
-function DownloadService($http, $q) {
+function TemplateService($http, $q) {
+	var uri = 'rest/api/template'
 	return {
-		getFile: function(){
+		list: function(){
 			var deffered = $q.defer();
 			
-			$http.get('download')
+			$http.get(uri)
 				.success(deffered.resolve)
 				.error(deffered.reject);
 			

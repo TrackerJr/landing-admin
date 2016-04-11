@@ -33,6 +33,9 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 		resolve: {
 			page: function(){
 				return {};
+			},
+			templates: function(TemplateService){
+				return TemplateService.list();
 			}
 		}
 	}).state('page.edit', {
@@ -42,6 +45,9 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 		resolve: {
 			page: function(PageDomainService, $stateParams) {
 				return PageDomainService.get($stateParams);
+			},
+			template: function(TemplateService){
+				return TemplateService.list();
 			}
 		}
 	});
