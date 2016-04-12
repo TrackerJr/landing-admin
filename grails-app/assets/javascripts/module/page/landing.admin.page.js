@@ -46,7 +46,7 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 			page: function(PageDomainService, $stateParams) {
 				return PageDomainService.get($stateParams);
 			},
-			template: function(TemplateService){
+			templates: function(TemplateService){
 				return TemplateService.list();
 			}
 		}
