@@ -60,10 +60,7 @@ function PageFormController($scope, page, templates, PageDomainService, Notifica
 			toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',			
 			templates: templates,		    
 		    content_css: [
-		        //'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
 		        'assets/tinymce/content.css'
-		        //'fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
-		        //'www.tinymce.com/css/codepen.min.css'
 		    ].concat(getStyleSheet()),
 		    contextmenu: "link image inserttable | cell row column deletetable"
 	};

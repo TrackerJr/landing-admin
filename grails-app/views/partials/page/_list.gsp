@@ -13,7 +13,7 @@
 					<i class="glyphicon glyphicon-list-alt"></i> {{page.name}}
 				</h3>
 				<p>
-					<a class="btn btn-default" href="rest/download/{{page.id}}" role="button" target="_black">
+					<a class="btn btn-default" href="download/{{page.path}}" role="button" target="_black">
 						<i class="glyphicon glyphicon-download-alt"></i> Download
 					</a>
 					<a class="btn btn-default" href="#" role="button" ui-sref="page.edit({id: page.id})">

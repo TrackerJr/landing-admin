@@ -13,7 +13,8 @@ class FileService {
 		
 		def pathToBase = Paths.get(basePath).normalize()
 		def pathToFile = Paths.get(basePath, filePath).normalize()
-
+		println "pathToBase: $pathToBase"
+		println "pathToFile: $pathToFile"
 		if (pathToFile.startsWith(pathToBase)) {
 			def file = pathToFile.toFile()
 			if (file.exists() && file.isFile()) {
