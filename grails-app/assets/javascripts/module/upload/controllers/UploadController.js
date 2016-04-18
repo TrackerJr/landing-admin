@@ -3,8 +3,8 @@
 angular.module('landing.admin.upload')
 	.controller('UploadController', UploadController);
 
-function UploadController($scope, $uibModal, $state, folders, FileUploader, TOKEN_HEADER_NAME, UserInfo) {
-	$scope.folders = folders;
+function UploadController($scope, $uibModal, $state, FileUploader, TOKEN_HEADER_NAME, UserInfo) {
+	//$scope.folders = folders;
 	
 	var uploader = $scope.uploader = new FileUploader({
         url: 'rest/api/upload'

@@ -8,7 +8,7 @@ class DownloadController {
 	def fileService
 	
     def index() {
-		def root = 'template'
+		def root = 'page'
 		def path = getPath(request.forwardURI, params.path)
 
 		def basePath = grailsApplication.config.grails?.plugins?.fileserver?.paths?.get(root)

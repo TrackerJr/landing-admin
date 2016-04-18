@@ -2,6 +2,7 @@ package landing.admin
 
 class UrlMappings {
 
+	static exclude = ['assets/**']
     static mappings = {
         "/$controller/$action?/$id?(.$format)?"{
             constraints {

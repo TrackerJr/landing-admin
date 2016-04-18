@@ -1,6 +1,6 @@
 //= wrapped
 //= require angular/module/angular-ui-router
-//= require angular/module/angular-file-upload
+//= require angular/module/angular-file-upload.min
 //= require angular/module/ui-bootstrap-tpls
 //= require_self
 //= require_tree services
@@ -18,9 +18,9 @@ function RouterConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 		templateUrl: 'partials/upload',
 		controller: 'UploadController',
 		resolve:{
-			folders: function(FolderDomainService) {
+			/*folders: function(FolderDomainService) {
 				return FolderDomainService.list();
-			}
+			}*/
 		}
 	});
 		

@@ -117,7 +117,7 @@ bower {
 		source 'angular-chart.css' >> '/chart/'
 	}
 	'angular-file-upload'('2.2.x') {
-		source 'dist/angular-file-upload.js' >> '/angular/module/'
+		source 'dist/angular-file-upload.min.js' >> '/angular/module/'
 	}
 	'angular-ui-notification'('0.1.x') {
 		source 'dist/angular-ui-notification.js' >> '/angular/module/'
