@@ -1,6 +1,6 @@
 <form>
-	<p>
-		<div class="pull-right">
+	<div>
+		<div class="pull-right">			
 			<button type="submit" class="btn btn-primary" ng-disabled="!page.text" ng-click="doSubmit(page)"
 				confirm="Are you sure to change this item?" confirm-settings="{size: 'sm'}">
 				<i class="glyphicon glyphicon-saved"></i> Submit
@@ -10,7 +10,12 @@
 				Back
 			</a>
 		</div>
+		<div class="pull-left">
+			<input type="text" name="view-width" id="view-width" value="650"/>
+			 x 
+			<input type="text" name="view-height" id="view-height" value="500"/>
+		</div>
 		<div class="clearfix"></div>
-	</p>
+	</div>
 	<div ui-tinymce="tinymceOptions" ng-model="page.text"></div>
 </form>

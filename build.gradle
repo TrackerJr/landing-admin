@@ -48,6 +48,8 @@ dependencyManagement {
     applyMavenExclusions false
 }
 
+war.archiveName="${war.baseName}.war"
+
 dependencies {
     assets "com.craigburke.angular:angular-template-asset-pipeline:2.2.6"
     assets "com.craigburke.angular:angular-annotate-asset-pipeline:2.4.0"
@@ -134,7 +136,10 @@ bower {
 		source 'tinymce.js' >> '/tinymce/'
 		source 'themes/**' >> '/tinymce/themes/'
 		source 'skins/**' >> '/tinymce/skins/'
-		source 'plugins/**' >> '/tinymce/plugins/'		
+		source 'plugins/**' >> '/tinymce/plugins/'
+		
+		excludes 'plugins/preview/**'
+		excludes 'plugins/template/**'
 	}
 	'angular-ui-tinymce'('0.0.x') {
 		source 'dist/tinymce.min.js' >> '/angular/module/'
