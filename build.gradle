@@ -130,6 +130,7 @@ bower {
 	}
     'bootstrap'('3.3.x') {
         source 'dist/css/bootstrap.css' >> '/bootstrap/'
+		source 'dist/js/bootstrap.css' >> '/bootstrap/'
 		source 'dist/fonts/**' >> '/fonts/'
     }	
 	'tinymce'('4.3.x') {

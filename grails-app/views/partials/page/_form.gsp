@@ -1,21 +1,27 @@
 <form>
-	<div>
-		<div class="pull-right">			
-			<button type="submit" class="btn btn-primary" ng-disabled="!page.text" ng-click="doSubmit(page)"
-				confirm="Are you sure to change this item?" confirm-settings="{size: 'sm'}">
+	<div style="margin-bottom: 10px;">
+		<div class="pull-right">
+			<button type="submit" class="btn btn-primary"
+				ng-disabled="!page.text" ng-click="doSubmit(page)"
+				confirm="Are you sure to change this item?"
+				confirm-settings="{size: 'sm'}">
 				<i class="glyphicon glyphicon-saved"></i> Submit
 			</button>
 			<a class="btn btn-default" href="#" role="button" ui-sref="^.list">
-				<i class="glyphicon glyphicon-remove"></i> 
-				Back
+				<i class="glyphicon glyphicon-remove"></i> Back
 			</a>
 		</div>
-		<div class="pull-left">
-			<input type="text" name="view-width" id="view-width" value="650"/>
-			 x 
-			<input type="text" name="view-height" id="view-height" value="500"/>
+		<div class="row">
+			<div class="col-xs-6 col-sm-3">
+				<select class="form-control"
+					ng-options="size as size.text for size in sizes" ng-model="size">
+				</select>
+			</div>
 		</div>
+
 		<div class="clearfix"></div>
 	</div>
-	<div ui-tinymce="tinymceOptions" ng-model="page.text"></div>
+	<div ng-repeat="tinymce in tinymces track by $index">
+		<div ui-tinymce="tinymceOptions" ng-model="page.text"></div>
+	</div>
 </form>

@@ -3,8 +3,19 @@
 angular.module('landing.admin.page')
 	.controller('PageFormController', PageFormController);
 
-function PageFormController($scope, page, templates, PageDomainService, Notification, $state) {
+function PageFormController($scope, page, templates, PageDomainService, Notification, $state, $timeout) {
 	$scope.page = page;
+	// refresh tinymce
+	$scope.tinymces = [1];
+	
+	$scope.sizes = [
+	     {text: '320 x 480', w: 320, h: 420},
+	     {text: '480 x 480', w: 480, h: 480},
+	     {text: '768 x 500', w: 768, h: 500},
+	     {text: '970 x 500', w: 970, h: 500},
+	     {text: '1170 x 500', w: 1170, h: 500}
+	];
+	$scope.size = $scope.sizes[0];
 	
 	if(!$scope.page.id) {
 		$scope.page.links = [		
@@ -62,7 +73,10 @@ function PageFormController($scope, page, templates, PageDomainService, Notifica
 		    content_css: [
 		        'assets/tinymce/content.css'
 		    ].concat(getStyleSheet()),
-		    contextmenu: "link image inserttable | cell row column deletetable"
+		    contextmenu: "link image inserttable | cell row column deletetable",
+		    plugin_preview_width: $scope.sizes[0].w,
+		    plugin_preview_height: $scope.sizes[0].h,
+		    template_popup_width: $scope.sizes[0].w
 	};
 	
 	
@@ -75,4 +89,15 @@ function PageFormController($scope, page, templates, PageDomainService, Notifica
 		}
 	};
 		
+	$scope.$watch('size', function(nv, ov) {
+		
+		$scope.tinymceOptions.plugin_preview_width = nv.w;
+		$scope.tinymceOptions.plugin_preview_height = nv.h;
+		$scope.tinymceOptions.template_popup_width = nv.w;
+		
+		$scope.tinymces = [];
+		$timeout(function(){
+			$scope.tinymces.push(1);
+		}, 1000);
+	});	
 }

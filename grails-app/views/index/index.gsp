@@ -23,7 +23,7 @@
   	
   	<g:render template="/components/navbar" />
   	
-  	<div ui-view="" class="container"></div>
+  	<div ui-view="" class="container-fluid"></div>
   	
 	<asset:javascript src="application.js" />	
   </body>

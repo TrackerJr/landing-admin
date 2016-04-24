@@ -1,5 +1,6 @@
 //= wrapped
 //= require /jquery/jquery
+//= require /bootstrap/bootstrap
 //= require /Chart.js/Chart
 //= require /angular/angular
 //= require /tinymce/tinymce
